@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="stylesheet/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body class="body">
+    <div class="overlay"></div>
+    <header>
+      <!-- The <nav> element represents a section of a page whose purpose is to provide navigation links -->
+      <nav aria-label="main menu">
+        <!-- Included the logo inside the nav since it is intended to act as a link (to the homepage) -->
+        <a class="logoContainer" aria-label="homepage" href="#"
+          ><img class="logo" src="images/logo.svg" alt="Snap"
+        /></a>
+        <!-- Menu Items -->
+        <ul class="menu">
+          <li class="row">
+            <!-- Disclosure widget submenu's -->
+            <details class="menuItem features">
+              <!-- Tabindex="0" allows the element to be navigated via the keyboard's Tab key -->
+              <summary aria-expanded="true/false" tabindex="0" role="button">
+                Features
+              </summary>
+              <ul class="detailsItems left featuresList">
+                <li><a href="">Todo List</a></li>
+                <li><a href="">Calender</a></li>
+                <li><a href="">Reminders</a></li>
+                <li><a href="">Planning</a></li>
+              </ul>
+            </details>
+            <details class="menuItem">
+              <!-- Tabindex="0" allows the element to be navigated via the keyboard's Tab key -->
+              <summary aria-expanded="true/false" tabindex="0" role="button">
+                Company
+              </summary>
+              <ul class="detailsItems right">
+                <li><a href="">History</a></li>
+                <li><a href="">Our Team</a></li>
+                <li><a href="">Blog</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a class="menuItem" href="#">Careers</a></li>
+          <li><a class="menuItem" href="#">About</a></li>
+          <!-- "Login & Register are navigations to another page or an external source, therefor they are links  -->
+          <li>
+            <a class="menuItem button login" href="#">Login</a>
+          </li>
+          <li>
+            <a class="menuItem button register" href="#">Register</a>
+          </li>
+        </ul>
+        <!-- Hamburger Menu Button for Mobile Phone viewports -->
+        <button class="hamburgerButton" aria-label="menu">
+          <!-- Icons -->
+          <img class="hamburgerIcon" src="images/icon-menu.svg" alt="" />
+          <img class="closeIcon" src="images/icon-close-menu.svg" alt="" />
+        </button>
+      </nav>
+    </header>
+    <main>
+      <!-- Div container for hero background-image -->
+      <div class="hero"></div>
+      <!-- Content -->
+      <section>
+        <h1>Make remote work</h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <!-- "Learn more" is a navigation to the next page or an external source, therefor it's a link  -->
+        <a href="#">Learn more</a>
+        <!-- Partners inside section's footer -->
+        <footer class="partners">
+          <ul>
+            <li>
+              <img class="partnerLogo" src="images/client-databiz.svg" alt="" />
+            </li>
+            <li>
+              <img
+                class="partnerLogo"
+                src="images/client-audiophile.svg"
+                alt=""
+              />
+            </li>
+            <li>
+              <img class="partnerLogo" src="images/client-meet.svg" alt="" />
+            </li>
+            <li>
+              <img class="partnerLogo" src="images/client-maker.svg" alt="" />
+            </li>
+          </ul>
+        </footer>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/kxnzx" target="_blank"
+        >kxnzx</a
+      >.
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

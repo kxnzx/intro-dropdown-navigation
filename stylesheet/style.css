@@ -1,0 +1,465 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 41%);
+}
+a:hover,
+a a:focus,
+a a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  background-color: hsl(0deg, 0%, 98%);
+}
+@media screen and (min-width: 1024px) {
+  body {
+    display: grid;
+    align-items: center;
+  }
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: hsl(0deg, 0%, 8%);
+  opacity: 0.75;
+  mix-blend-mode: multiply;
+}
+@media screen and (min-width: 1024px) {
+  .overlay {
+    display: none;
+  }
+}
+
+header {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  header {
+    position: fixed;
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .logoContainer {
+    display: block;
+  }
+}
+
+nav {
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  nav {
+    padding: 1.5rem 2rem 2.5rem 2rem;
+    width: 100%;
+  }
+}
+
+main {
+  display: grid;
+  place-items: center;
+}
+@media screen and (min-width: 1024px) {
+  main {
+    grid-template-columns: 42.813rem 30rem;
+    grid-template-rows: auto;
+    max-width: 72.813rem;
+    max-height: 40rem;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+
+.hero {
+  background-image: url(../images/image-hero-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 17.625rem;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    background-image: url(../images/image-hero-desktop.png);
+    height: 100%;
+    background-size: contain;
+    grid-column: 2/3;
+    grid-row: 1;
+  }
+}
+
+section {
+  text-align: center;
+  padding-top: 3.125rem;
+}
+@media screen and (min-width: 1024px) {
+  section {
+    padding: 0;
+    grid-column: 1/2;
+    grid-row: 1;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+section > h1 {
+  color: hsl(0deg, 0%, 8%);
+  font-size: 2.188rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding: 0 1.25rem;
+}
+@media screen and (min-width: 1024px) {
+  section > h1 {
+    font-size: 5rem;
+    max-width: 33.125rem;
+    padding: 0;
+    margin-top: 5.5rem;
+  }
+}
+
+section > p {
+  color: hsl(0deg, 0%, 41%);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  padding: 0 1.25rem;
+}
+@media screen and (min-width: 1024px) {
+  section > p {
+    padding: 0;
+    margin: 2.75rem 0 0 0;
+    font-size: 1.125rem;
+    max-width: 26.563rem;
+  }
+}
+
+section > a {
+  color: hsl(0deg, 0%, 98%);
+  background-color: hsl(0deg, 0%, 8%);
+  padding: 0.95rem 1.3rem;
+  border-radius: 14px;
+  margin-bottom: 1.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+section > a:hover {
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(0deg, 0%, 8%);
+  border: hsl(0deg, 0%, 8%) solid 2px;
+}
+@media screen and (min-width: 1024px) {
+  section > a {
+    display: inline-block;
+    margin: 3.438rem 0 0 0;
+    padding: 1.125rem 1.875rem;
+    z-index: 98;
+    position: relative;
+  }
+}
+
+section > footer {
+  margin-top: 3.875rem;
+  width: 100%;
+  padding: 0 1.25rem;
+}
+@media screen and (min-width: 1024px) {
+  section > footer {
+    padding: 0;
+    margin: 6.65rem 0 0 0;
+    width: 100%;
+  }
+}
+
+.partners > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .partners > ul {
+    max-width: 30rem;
+  }
+}
+
+.partnerLogo {
+  width: 4.063rem;
+}
+@media screen and (min-width: 1024px) {
+  .partnerLogo {
+    width: 5.5rem;
+  }
+}
+
+.hamburgerButton {
+  position: fixed;
+  right: 1rem;
+  z-index: 100;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .hamburgerButton {
+    display: none;
+  }
+}
+
+.closeIcon {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  display: none;
+  transition: transform 0.2s;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: hsl(0deg, 0%, 98%);
+  padding: 4rem 1.25rem;
+  width: 65%;
+  color: hsl(0deg, 0%, 41%);
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    padding: 0 0 0 3rem;
+    background: none;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+.menuItem:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+
+.features {
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .features {
+    margin-bottom: 0;
+  }
+}
+
+.menu > li {
+  margin-top: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .menu > li {
+    margin: 0;
+  }
+}
+.menu > li:nth-child(4) {
+  margin-top: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .menu > li:nth-child(4) {
+    margin: 0;
+    position: absolute;
+    right: 7.25rem;
+  }
+}
+.menu > li:nth-child(5) {
+  margin-top: 0.125rem;
+}
+@media screen and (min-width: 1024px) {
+  .menu > li:nth-child(5) {
+    margin-top: 0;
+    right: 0;
+    position: absolute;
+  }
+}
+
+.button {
+  display: block;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 14px;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .button {
+    padding: 0.625rem 1.125rem;
+  }
+}
+
+details > summary {
+  width: 5.938rem;
+  list-style: none;
+  cursor: pointer;
+}
+details > summary::after {
+  content: url(../images/icon-arrow-down.svg);
+  float: right;
+  transition: 0.2s ease-in;
+}
+
+.detailsItems > li {
+  margin-top: 1.5rem;
+  margin-left: 1.8rem;
+}
+@media screen and (min-width: 1024px) {
+  .detailsItems > li {
+    margin: 0 0 1rem 0;
+  }
+  .detailsItems > li:last-child {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .detailsItems {
+    z-index: 99;
+    background-color: hsl(0deg, 0%, 98%);
+    position: fixed;
+    border-radius: 9px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .left {
+    top: 4.25rem;
+    left: 6.25rem;
+    padding: 1rem 1.4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .right {
+    top: 4.25rem;
+    left: 18rem;
+    padding: 1rem 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .featuresList li:not(:last-child) {
+    margin: 0 0 1rem 0;
+  }
+}
+.featuresList li:before {
+  transform: scale(1.2);
+}
+.featuresList li:nth-child(1):before {
+  content: url(../images/icon-todo.svg);
+}
+.featuresList li:nth-child(2):before {
+  content: url(../images/icon-calendar.svg);
+}
+.featuresList li:nth-child(3):before {
+  content: url(../images/icon-reminders.svg);
+  right: 11.8rem;
+}
+.featuresList li:nth-child(4):before {
+  content: url(../images/icon-planning.svg);
+}
+.featuresList li:nth-child(1):hover {
+  color: #726cee;
+}
+.featuresList li:nth-child(2):hover {
+  color: #4bb1da;
+}
+.featuresList li:nth-child(3):hover {
+  color: #edd556;
+}
+.featuresList li:nth-child(4):hover {
+  color: #8e4cb6;
+}
+
+.featuresList li > a {
+  margin-left: 0.75rem;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary::after {
+  content: url(../images/icon-arrow-up.svg);
+  transition: 0.2s ease-in;
+}
+
+.login:hover {
+  background-color: hsl(0deg, 0%, 41%);
+  border: hsl(0deg, 0%, 41%) solid 2px;
+  color: hsl(0deg, 0%, 98%);
+}
+@media screen and (min-width: 1024px) {
+  .login {
+    width: 6.625rem;
+  }
+}
+
+.register {
+  border: hsl(0deg, 0%, 41%) solid 2px;
+}
+.register:hover {
+  background-color: hsl(0deg, 0%, 41%);
+  color: hsl(0deg, 0%, 98%);
+}
+
+.showMenu {
+  display: block;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: hsl(0deg, 0%, 8%);
+}
+.attribution a {
+  color: hsl(0deg, 0%, 41%);
+}/*# sourceMappingURL=style.css.map */

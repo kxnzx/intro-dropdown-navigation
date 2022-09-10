@@ -1,0 +1,483 @@
+// GOOGLE FONTS
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+// VARIABLES
+// Colors
+// neutral colors
+$almost_white: hsl(0, 0%, 98%);
+$medium_gray: hsl(0, 0%, 41%);
+$almost_black: hsl(0, 0%, 8%);
+// Typography
+// font-family
+$ff: "Epilogue", sans-serif;
+// font-weight
+$fw_medium: 500;
+$fw_bold: 700;
+// font-size
+$fs_bodyCopy: 1.125rem;
+// Breakpoints
+$mobile: 640px;
+$tablet: 768px;
+$xl_tablet: 960px;
+$desktop: 1024px;
+// RESET
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $medium_gray;
+  &:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+// STYLES
+body {
+  font-family: $ff;
+  background-color: $almost_white;
+  @media screen and (min-width: $desktop) {
+    display: grid;
+    align-items: center;
+  }
+}
+// The styling of this class will be toggled with Javascript with display: block
+.overlay {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: $almost_black;
+  opacity: 0.75;
+  mix-blend-mode: multiply;
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+
+header {
+  width: 100%;
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    position: fixed;
+    top: 0;
+  }
+}
+
+.logoContainer {
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    display: block;
+  }
+}
+
+nav {
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    padding: 1.5rem 2rem 2.5rem 2rem;
+    width: 100%;
+  }
+}
+
+main {
+  display: grid;
+  place-items: center;
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    grid-template-columns: 42.813rem 30rem;
+    grid-template-rows: auto;
+    max-width: 72.813rem;
+    max-height: 40rem;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+
+.hero {
+  background-image: url(../images/image-hero-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 17.625rem;
+  width: 100%;
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    background-image: url(../images/image-hero-desktop.png);
+    height: 100%;
+    background-size: contain;
+    grid-column: 2/3;
+    grid-row: 1;
+  }
+}
+
+section {
+  text-align: center;
+  padding-top: 3.125rem;
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    padding: 0;
+    grid-column: 1/2;
+    grid-row: 1;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+section > h1 {
+  color: $almost_black;
+  font-size: 2.188rem;
+  font-weight: $fw_bold;
+  margin-bottom: 1.5rem;
+  padding: 0 1.25rem;
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    font-size: 5rem;
+    max-width: 33.125rem;
+    padding: 0;
+    margin-top: 5.5rem;
+  }
+}
+
+section > p {
+  color: $medium_gray;
+  font-size: 1rem;
+  font-weight: $fw_medium;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  padding: 0 1.25rem;
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    padding: 0;
+    margin: 2.75rem 0 0 0;
+    font-size: $fs_bodyCopy;
+    max-width: 26.563rem;
+  }
+}
+// LEARN MORE BUTTON
+section > a {
+  color: $almost_white;
+  background-color: $almost_black;
+  padding: 0.95rem 1.3rem;
+  border-radius: 14px;
+  margin-bottom: 1.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  &:hover {
+    background-color: $almost_white;
+    color: $almost_black;
+    border: $almost_black solid 2px;
+  }
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    display: inline-block;
+    margin: 3.438rem 0 0 0;
+    padding: 1.125rem 1.875rem;
+    // Z-INDEX FOR "LEARN MORE" LINK TO MAINTAIN IT'S "CLICKABILITY"
+    z-index: 98;
+    position: relative;
+  }
+}
+
+section > footer {
+  margin-top: 3.875rem;
+  width: 100%;
+  padding: 0 1.25rem;
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    padding: 0;
+    margin: 6.65rem 0 0 0;
+    width: 100%;
+  }
+}
+
+.partners > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    max-width: 30rem;
+  }
+}
+
+.partnerLogo {
+  width: 4.063rem;
+  @media screen and (min-width: $desktop) {
+    width: 5.5rem;
+  }
+}
+
+// MOBILE VIEWPORT WITH HAMBURGER BUTTON TOGGLE
+.hamburgerButton {
+  position: fixed;
+  right: 1rem;
+  z-index: 100;
+  border: none;
+  background: none;
+  cursor: pointer;
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.closeIcon {
+  display: none;
+}
+// DROPDOWN MENU FOR MOBILE VIEWPORTS
+.menu {
+  position: fixed;
+  display: none;
+  transition: transform 0.2s;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  // This means that the dropdown menu is on top of the main:
+  z-index: 99;
+  background-color: $almost_white;
+  padding: 4rem 1.25rem;
+  width: 65%;
+  color: $medium_gray;
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    padding: 0 0 0 3rem;
+    background: none;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+  }
+}
+
+.row {
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+.menuItem {
+  &:hover {
+    color: $almost_black;
+  }
+}
+
+.features {
+  margin-bottom: 1.5rem;
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.menu > li {
+  margin-top: 1.5rem;
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    margin: 0;
+  }
+
+  &:nth-child(4) {
+    margin-top: 2rem;
+    // DESKTOP VIEWPORT
+    @media screen and (min-width: $desktop) {
+      margin: 0;
+      position: absolute;
+      right: 7.25rem;
+    }
+  }
+  &:nth-child(5) {
+    margin-top: 0.125rem;
+    // DESKTOP VIEWPORT
+    @media screen and (min-width: $desktop) {
+      margin-top: 0;
+      right: 0;
+      position: absolute;
+    }
+  }
+}
+
+.button {
+  display: block;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 14px;
+  cursor: pointer;
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    padding: 0.625rem 1.125rem;
+  }
+}
+
+details > summary {
+  width: 5.938rem;
+  list-style: none;
+  cursor: pointer;
+  &::after {
+    content: url(../images/icon-arrow-down.svg);
+    float: right;
+    transition: 0.2s ease-in;
+  }
+}
+
+.detailsItems > li {
+  margin-top: 1.5rem;
+  margin-left: 1.8rem;
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    margin: 0 0 1rem 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.detailsItems {
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    z-index: 99;
+    background-color: $almost_white;
+    position: fixed;
+    border-radius: 9px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+}
+// DROPDOWN MENU FEATURES
+.left {
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    top: 4.25rem;
+    left: 6.25rem;
+    padding: 1rem 1.4rem;
+  }
+}
+// DROPDOWN MENU COMPANY
+.right {
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    top: 4.25rem;
+    left: 18rem;
+    padding: 1rem 1.6rem;
+  }
+}
+
+.featuresList li {
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    &:not(:last-child) {
+      margin: 0 0 1rem 0;
+    }
+  }
+  &:before {
+    transform: scale(1.2);
+  }
+  // Pseudo-classes & Pseudo-elements combination:
+  &:nth-child(1):before {
+    content: url(../images/icon-todo.svg);
+  }
+  &:nth-child(2):before {
+    content: url(../images/icon-calendar.svg);
+  }
+  &:nth-child(3):before {
+    content: url(../images/icon-reminders.svg);
+    right: 11.8rem;
+  }
+  &:nth-child(4):before {
+    content: url(../images/icon-planning.svg);
+  }
+  &:nth-child(1):hover {
+    color: #726cee;
+  }
+  &:nth-child(2):hover {
+    color: #4bb1da;
+  }
+  &:nth-child(3):hover {
+    color: #edd556;
+  }
+  &:nth-child(4):hover {
+    color: #8e4cb6;
+  }
+}
+
+.featuresList li > a {
+  margin-left: 0.75rem;
+}
+
+// Customize the default arrow with Webkit Pseudo-element:
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+// Rotate arrow image after the summary when details are open:
+details[open] summary::after {
+  content: url(../images/icon-arrow-up.svg);
+  transition: 0.2s ease-in;
+}
+
+.login {
+  &:hover {
+    background-color: $medium_gray;
+    border: $medium_gray solid 2px;
+    color: $almost_white;
+  }
+  // DESKTOP VIEWPORT
+  @media screen and (min-width: $desktop) {
+    width: 6.625rem;
+  }
+}
+
+.register {
+  border: $medium_gray solid 2px;
+  &:hover {
+    background-color: $medium_gray;
+    color: $almost_white;
+  }
+}
+// This class will be added & removed from the menu class with Javascript, to display & hide the Menu
+.showMenu {
+  display: block;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: $almost_black;
+  a {
+    color: $medium_gray;
+  }
+}
