@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- View my Solution on [Frontend Mentor]()
-- View the Live Site [here]()
+- View my Solution on [Frontend Mentor](https://www.frontendmentor.io/solutions/intro-dropdown-navigation-with-vanilla-javascript-Uhwg04l8Nb)
+- View the Live Site [here](https://kxnzx.github.io/intro-dropdown-navigation/)
 
 ## My process
 
