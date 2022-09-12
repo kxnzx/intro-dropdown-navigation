@@ -255,6 +255,7 @@ section > footer {
   background-color: hsl(0deg, 0%, 98%);
   padding: 4rem 1.25rem;
   width: 65%;
+  max-width: 18.313rem;
   color: hsl(0deg, 0%, 41%);
 }
 @media screen and (min-width: 1024px) {
@@ -306,7 +307,7 @@ section > footer {
   .menu > li:nth-child(4) {
     margin: 0;
     position: absolute;
-    right: 7.25rem;
+    right: -55.5rem;
   }
 }
 .menu > li:nth-child(5) {
@@ -315,7 +316,7 @@ section > footer {
 @media screen and (min-width: 1024px) {
   .menu > li:nth-child(5) {
     margin-top: 0;
-    right: 0;
+    right: -62.438rem;
     position: absolute;
   }
 }

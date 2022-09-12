@@ -265,6 +265,7 @@ section > footer {
   background-color: $almost_white;
   padding: 4rem 1.25rem;
   width: 65%;
+  max-width: 18.313rem;
   color: $medium_gray;
   // DESKTOP VIEWPORT
   @media screen and (min-width: $desktop) {
@@ -315,7 +316,7 @@ section > footer {
     @media screen and (min-width: $desktop) {
       margin: 0;
       position: absolute;
-      right: 7.25rem;
+      right: -55.5rem;
     }
   }
   &:nth-child(5) {
@@ -323,7 +324,7 @@ section > footer {
     // DESKTOP VIEWPORT
     @media screen and (min-width: $desktop) {
       margin-top: 0;
-      right: 0;
+      right: -62.438rem;
       position: absolute;
     }
   }
