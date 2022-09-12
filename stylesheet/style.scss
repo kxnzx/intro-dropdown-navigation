@@ -265,6 +265,7 @@ section > footer {
   background-color: $almost_white;
   padding: 4rem 1.25rem;
   width: 65%;
+  max-width: 18.75rem;
   color: $medium_gray;
   // DESKTOP VIEWPORT
   @media screen and (min-width: $desktop) {
