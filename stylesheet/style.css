@@ -255,7 +255,6 @@ section > footer {
   background-color: hsl(0deg, 0%, 98%);
   padding: 4rem 1.25rem;
   width: 65%;
-  max-width: 18.75rem;
   color: hsl(0deg, 0%, 41%);
 }
 @media screen and (min-width: 1024px) {
