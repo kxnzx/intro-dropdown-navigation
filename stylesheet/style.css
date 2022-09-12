@@ -180,7 +180,7 @@ section > a {
 section > a:hover {
   background-color: hsl(0deg, 0%, 98%);
   color: hsl(0deg, 0%, 8%);
-  border: hsl(0deg, 0%, 8%) solid 2px;
+  outline: hsl(0deg, 0%, 8%) solid 2px;
 }
 @media screen and (min-width: 1024px) {
   section > a {
